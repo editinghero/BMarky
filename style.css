@@ -1,0 +1,322 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;700&display=swap');
+
+body {
+    font-family: 'SF Pro Display', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ecf0f1; /* Light text color */
+    background: #1c1c1c; /* Dark background */
+    overflow-x: hidden;
+}
+
+/* Fixed Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Translucent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+    z-index: 1000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ecf0f1;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px; /* Add spacing between buttons */
+    justify-content: center;
+    margin-top: 80px; /* Adjusted to avoid overlap with header */
+    margin-bottom: 20px;
+}
+
+.action-buttons button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Bookmark Manager Container */
+.bookmark-container {
+    margin-top: 20px; /* Adjusted to avoid overlap with action buttons */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Search Bar */
+.search-bar {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    transition: background 0.3s ease;
+}
+
+.search-bar input::placeholder {
+    color: #bdc3c7;
+}
+
+.search-bar input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White glow effect */
+}
+
+/* Bookmark Input Form */
+.bookmark-input {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.bookmark-input input[type="text"],
+.bookmark-input input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    margin-bottom: 10px;
+    transition: background 0.3s ease;
+}
+
+.bookmark-input input[type="text"]::placeholder,
+.bookmark-input input[type="url"]::placeholder {
+    color: #bdc3c7;
+}
+
+.bookmark-input input[type="text"]:focus,
+.bookmark-input input[type="url"]:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White glow effect */
+}
+
+.bookmark-input button {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bookmark-input button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Bookmark List */
+.bookmark-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+.bookmark-item {
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    word-wrap: break-word;
+}
+
+.bookmark-item a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.bookmark-item a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.bookmark-item .details {
+    margin-bottom: 5px;
+}
+
+.bookmark-item .details span {
+    margin-right: 10px;
+}
+
+.bookmark-item div {
+    display: flex;
+    gap: 5px;
+}
+
+.bookmark-item button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bookmark-item button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Share Popup */
+.share-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 2000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.share-popup p {
+    color: #ecf0f1;
+    text-align: center;
+}
+
+/* Import Popup */
+.import-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 2000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.import-popup input {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    width: 100%;
+}
+
+.import-popup button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.import-popup button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Search Bar */
+.search-bar {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    flex: 1; /* Take up remaining space */
+    padding: 10px;
+    border: none;
+    border-radius: 10px 0 0 10px; /* Rounded corners on the left */
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    transition: background 0.3s ease;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #bdc3c7;
+}
+
+.search-bar input[type="text"]:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White glow effect */
+}
+
+/* Search Button */
+.search-bar button#search-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 10px 10px 0; /* Rounded corners on the right */
+    background: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-bar button#search-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.search-bar button#search-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White glow effect */
+}

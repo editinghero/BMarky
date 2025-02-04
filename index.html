@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMarky</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header>
+        <h1>BMarky</h1>
+    </header>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button id="import-btn">Import</button>
+        <button id="export-btn">Export</button>
+        <button id="share-btn">Share</button>
+    </div>
+
+    <!-- Bookmark Manager Container -->
+    <div class="bookmark-container">
+        <!-- Search Bar -->
+        <!-- Search Bar -->
+<div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search bookmarks...">
+    <button id="search-btn" onclick="searchBookmarks()">Search</button>
+</div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search bookmarks...">
+        </div>
+
+        <!-- Bookmark Input Form -->
+        <div class="bookmark-input">
+            <input type="text" id="bookmark-name" placeholder="Bookmark Name...">
+            <input type="url" id="bookmark-url" placeholder="Bookmark URL...">
+            <input type="text" id="bookmark-description" placeholder="Description...">
+            <input type="text" id="bookmark-folder" placeholder="Folder (Optional)">
+            <button id="add-bookmark-btn">Add Bookmark</button>
+        </div>
+
+        <!-- Bookmark List -->
+        <ul class="bookmark-list" id="bookmark-list"></ul>
+    </div>
+
+    <!-- Share Popup -->
+    <div class="share-popup" id="share-popup">
+        <h3>Generating Shareable Link...</h3>
+        <p id="share-link-message"></p>
+    </div>
+
+    <!-- Import Popup -->
+    <div class="import-popup" id="import-popup">
+        <h3>Import Bookmarks</h3>
+        <input type="file" id="import-file" accept=".html,.json">
+        <button id="import-cancel-btn">Cancel</button>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
