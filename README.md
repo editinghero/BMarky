@@ -1,6 +1,6 @@
 # BMarky
 
-https://editinghero.github.io/bmarky/
+https://editinghero.github.io/BMarky/
 
 BMarky : Book Mark Manager for Chromium Based and Firefox
 
